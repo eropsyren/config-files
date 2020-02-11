@@ -1,9 +1,0 @@
-#!/bin/sh
-
-ln -i vimrc ~/.vimrc
-
-ln -i xinitrc ~/.xinitrc
-
-ln -i Xresources ~/.Xresources
-
-ln -i i3-config ~/.config/i3/config
