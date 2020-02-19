@@ -12,3 +12,14 @@
 
 " Autotabs for certain code
 :set smarttab
+
+" PLUGINS
+call plug#begin()
+
+Plug 'mattn/emmet-vim'
+
+call plug#end()
+
+
+" emmet config
+letg:user_emmet_leader_key=','
