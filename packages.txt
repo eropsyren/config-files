@@ -1,0 +1,6 @@
+i3
+rxvt-unicode
+vim
+xorg
+wicd-curses
+
