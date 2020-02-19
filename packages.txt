@@ -3,4 +3,4 @@ rxvt-unicode
 vim
 xorg
 wicd-curses
-
+htop
