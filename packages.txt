@@ -4,3 +4,4 @@ vim
 xorg
 wicd-curses
 htop
+curl
