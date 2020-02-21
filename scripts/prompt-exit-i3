@@ -1,0 +1,7 @@
+#!/bin/bash
+
+RESPONSE=$(printf "no\nyes\n" | dmenu -i -p "Do you want to exit?")
+
+if [ "$RESPONSE" == "yes" ]; then
+	i3-msg exit
+fi
