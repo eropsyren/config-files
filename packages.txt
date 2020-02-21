@@ -5,3 +5,5 @@ xorg
 wicd-curses
 htop
 curl
+htop
+pulseaudio
