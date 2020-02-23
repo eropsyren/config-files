@@ -7,3 +7,5 @@ htop
 curl
 htop
 pulseaudio
+zathura
+moc
