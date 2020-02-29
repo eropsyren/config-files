@@ -1,5 +1,5 @@
 i3
-rxvt-unicode
+xfce4-terminal
 vim
 xorg
 wicd-curses
