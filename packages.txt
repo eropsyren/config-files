@@ -10,3 +10,4 @@ pulseaudio
 zathura
 moc
 unzip
+snapd
