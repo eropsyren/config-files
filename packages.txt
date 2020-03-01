@@ -9,3 +9,4 @@ htop
 pulseaudio
 zathura
 moc
+unzip
