@@ -11,3 +11,4 @@ zathura
 moc
 unzip
 snapd
+mpv
