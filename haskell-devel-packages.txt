@@ -1,2 +1,3 @@
 haskell-platform
+haskell-stack
 
