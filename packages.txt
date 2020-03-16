@@ -12,3 +12,4 @@ moc
 unzip
 snapd
 mpv
+pandoc
