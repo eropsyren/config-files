@@ -27,4 +27,5 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # set PATH to include custom scripts
-PATH="$HOME/.scripts:$PATH"
+export PATH="$HOME/.scripts:$HOME/.cargo/bin:$PATH"
+
