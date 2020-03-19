@@ -12,4 +12,4 @@ moc
 unzip
 snapd
 mpv
-pandoc
+tree
