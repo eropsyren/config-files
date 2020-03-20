@@ -13,13 +13,3 @@
 " Autotabs for certain code
 :set smarttab
 
-" PLUGINS
-call plug#begin()
-
-Plug 'mattn/emmet-vim'
-
-call plug#end()
-
-
-" emmet config
-let g:user_emmet_leader_key=','
