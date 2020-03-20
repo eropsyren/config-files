@@ -1,5 +1,5 @@
 ! Font
-URxvt.font: xft:Monospace:pixelsize=14
+URxvt.font: xft:Monospace:pixelsize=15
 
 ! Disable scrollbar
 URxvt.scrollBar: false
