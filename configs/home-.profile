@@ -29,3 +29,12 @@ fi
 # set PATH to include custom scripts
 export PATH="$HOME/.scripts:$HOME/.cargo/bin:$PATH"
 
+# set default editor
+export EDITOR="vim"
+
+# set default browser
+export BROWSER="firefox"
+
+# set default terminal
+export TERMINAL="urxvt"
+
