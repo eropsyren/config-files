@@ -12,3 +12,4 @@ unzip
 snapd
 mpv
 tree
+poppler-utils
