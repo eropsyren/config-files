@@ -12,12 +12,6 @@ filetype plugin on
 " you can enable this to see a highlighted column to mark 80 char line limit
 " :set colorcolumn=80
 
-" set leader key to space
-:let mapleader=" "
-
-" you can also set the local leader (in this case to ,)
-" :let maplocalleader=","
-
 " set relative line number
 set relativenumber
 
@@ -31,21 +25,42 @@ set tabstop=4 shiftwidth=4 expandtab
 " autotabs for certain code
 set smarttab
 
+" set autosave update time to 1s
+set updatetime=1000
+
+" autosave after updatetime time of user inactivity
+augroup autosave
+autocmd!
+autocmd CursorHold,CursorHoldI * :update 
+augroup END
+
 " -----------------------------------------------------------------------------
 
 " MAPPINGS:
 
+" set leader key to space
+let mapleader=" "
+
+" you can also set the local leader (in this case to ,)
+" :let maplocalleader=","
+
 " for the sake of all of us, no arrow keys
-:noremap <up> <nop>
-:noremap <down> <nop>
-:noremap <left> <nop>
-:noremap <right> <nop>
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+
+" easier split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " map to quick edit ~/.vimrc
-:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " map to source vim file
-:nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " -----------------------------------------------------------------------------
 
@@ -97,12 +112,18 @@ command! MakeTags !ctags -R
 
 " -----------------------------------------------------------------------------
 
-" FILE BROWSING:
+" FILE BROWSER:
 
-" tweaks
-let g:netrw_banner=0		" disable banner
-let g:netrw_browse_split=4	" open in prior window
-let g:netrw_altv=1			" open splits to the right
+" disable banner
+let g:netrw_banner=0
+" enable tree mode
+let g:liststyle=3
+" set file explorer split size
+let g:netrw_winsize=15
+" open in prior window
+let g:netrw_browse_split=4	
+" open splits to the right
+let g:netrw_altv=1			
 
 " NOW WE CAN:
 " - :edit    a folder to open a file browser
@@ -111,7 +132,7 @@ let g:netrw_altv=1			" open splits to the right
 
 " -----------------------------------------------------------------------------
 
-" NIPPETS:
+" SNIPPETS:
 
 " read an empty html template and move cursor to title
 " nnoremap ,html :-1read $HOME/.vim/.snippets/.html/body.html<CR>3jwf>a
