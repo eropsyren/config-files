@@ -9,7 +9,6 @@ pulseaudio
 zathura
 moc
 unzip
-snapd
 mpv
 tree
 poppler-utils
