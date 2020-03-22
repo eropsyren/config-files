@@ -13,4 +13,4 @@ snapd
 mpv
 tree
 poppler-utils
-groff
+texlive-full
