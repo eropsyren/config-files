@@ -15,4 +15,4 @@ for f in os.listdir('configs'):
     os.system(f'mkdir -p {dir_path}')
 
     file_path  = '/'.join(path)
-    os.system(f'ln -i configs/{f} {file_path}')
+    os.system(f'ln -s -i configs/{f} {file_path}')
