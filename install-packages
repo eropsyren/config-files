@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for PACKAGEFILE in "$@"
+do
+    xargs -I '{}' apt install -y  {} < $PACKAGEFILE
+done
+
