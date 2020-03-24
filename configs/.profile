@@ -27,7 +27,7 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # set PATH to include custom scripts
-export PATH="$HOME/.scripts:$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.scripts:$PATH"
 
 # set default editor
 export EDITOR="vim"
