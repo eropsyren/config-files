@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd configs
+
+find -type f -printf '%P\n' | xargs -I '{}' ln -f -v {} $HOME/{}
