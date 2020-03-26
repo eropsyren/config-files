@@ -2,4 +2,9 @@
 
 cd configs
 
+# create all necessary directories
+find -type d | xargs -I '{}' mkdir -p $HOME/{} 
+
+# link config files
 find -type f -printf '%P\n' | xargs -I '{}' ln -f -v {} $HOME/{}
+
