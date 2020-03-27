@@ -67,9 +67,9 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " -----------------------------------------------------------------------------
 
-" LATEX SNIPPETS:
+" BETTER LATEX:
 
-augroup latexsnippets
+augroup betterlatex
 autocmd!
 autocmd FileType plaintex,tex nnoremap <buffer> <leader>eq :-1read $HOME/.vim/snippets/latex/equation.tex<cr>o
 autocmd FileType plaintex,tex nnoremap <buffer> <leader>ae :-1read $HOME/.vim/snippets/latex/align.tex<cr>o
@@ -82,10 +82,12 @@ augroup END
 
 " -----------------------------------------------------------------------------
 
-" C SNIPPETS:
+" BETTER C:
 
-augroup csnippets
+augroup betterc
 autocmd!
+autocmd FileType c set path+=/usr/local/include,/usr/include
+
 autocmd FileType c inoremap <buffer> {<cr> {<cr>}<esc>O<tab>
 autocmd FileType c inoremap <buffer> (     ()<esc>i
 autocmd FileType c inoremap <buffer> ()    ()
