@@ -22,8 +22,11 @@ set number
 " while indenting, vim will use 4 spaces
 set tabstop=4 shiftwidth=4 expandtab
 
-" autotabs for certain code
+" replace tabs with spaces
 set smarttab
+
+" autotabs for certain code
+set autoindent
 
 " set autosave update time to 1s
 set updatetime=1000
@@ -61,6 +64,45 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " map to source vim file
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" -----------------------------------------------------------------------------
+
+" LATEX SNIPPETS:
+
+augroup latexsnippets
+autocmd!
+autocmd FileType plaintex,tex nnoremap <buffer> <leader>eq :-1read $HOME/.vim/snippets/latex/equation.tex<cr>o
+autocmd FileType plaintex,tex nnoremap <buffer> <leader>ae :-1read $HOME/.vim/snippets/latex/align.tex<cr>o
+autocmd FileType plaintex,tex nnoremap <buffer> <leader>al :-1read $HOME/.vim/snippets/latex/algorithm.tex<cr>
+autocmd FileType plaintex,tex nnoremap <buffer> <leader>ch :-1read $HOME/.vim/snippets/latex/chapter.tex<cr>f{a
+autocmd FileType plaintex,tex nnoremap <buffer> <leader>se :-1read $HOME/.vim/snippets/latex/section.tex<cr>f{a
+autocmd FileType plaintex,tex nnoremap <buffer> <leader>ss :-1read $HOME/.vim/snippets/latex/subsection.tex<cr>f{a
+autocmd FileType plaintex,tex nnoremap <buffer> <leader>be :-1read $HOME/.vim/snippets/latex/begin-end.tex<cr>f{a
+augroup END
+
+" -----------------------------------------------------------------------------
+
+" C SNIPPETS:
+
+augroup csnippets
+autocmd!
+autocmd FileType c inoremap <buffer> {<cr> {<cr>}<esc>O<tab>
+autocmd FileType c inoremap <buffer> (     ()<esc>i
+autocmd FileType c inoremap <buffer> ()    ()
+autocmd FileType c inoremap <buffer> [     []<esc>i
+autocmd FileType c inoremap <buffer> []    []
+autocmd FileType c inoremap <buffer> "     ""<esc>i
+autocmd FileType c inoremap <buffer> ""    ""
+autocmd FileType c inoremap <buffer> '     ''<esc>i
+
+autocmd FileType c nnoremap <buffer> <leader>for :-1read $HOME/.vim/snippets/c/for.c<cr>/S<cr>xi
+autocmd FileTYpe c nnoremap <buffer> <leader>if  :-1read $HOME/.vim/snippets/c/if.c<cr>f(a
+autocmd FileTYpe c nnoremap <buffer> <leader>ie  :-1read $HOME/.vim/snippets/c/if-else.c<cr>f(a
+autocmd FileTYpe c nnoremap <buffer> <leader>in  :-1read $HOME/.vim/snippets/c/include.c<cr>f<a
+autocmd FileTYpe c nnoremap <buffer> <leader>wh  :-1read $HOME/.vim/snippets/c/while.c<cr>f(a
+autocmd FileTYpe c nnoremap <buffer> <leader>st  :-1read $HOME/.vim/snippets/c/struct.c<cr>:s/MyStruct//g
+autocmd FileTYpe c nnoremap <buffer> <leader>so  :-1read $HOME/.vim/snippets/c/opaque-struct.c<cr>:s/MyStruct//g
+augroup END
 
 " -----------------------------------------------------------------------------
 
@@ -129,13 +171,6 @@ let g:netrw_altv=1
 " - :edit    a folder to open a file browser
 " - <CR>/v/t to open a h-split/v-split/tab
 " - check |netrw-browse-maps| for more mappings
-
-" -----------------------------------------------------------------------------
-
-" SNIPPETS:
-
-" read an empty html template and move cursor to title
-" nnoremap ,html :-1read $HOME/.vim/.snippets/.html/body.html<CR>3jwf>a
 
 " -----------------------------------------------------------------------------
 
