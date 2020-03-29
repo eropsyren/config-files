@@ -26,6 +26,9 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Press alt+shift to swap keyboard layout
+setxkbmap -option grp:alt_shift_toggle us,it
+
 # set PATH to include custom scripts
 export PATH="$HOME/.scripts:$PATH"
 
