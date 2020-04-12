@@ -86,24 +86,24 @@ augroup END
 
 augroup betterc
 autocmd!
-autocmd FileType c set path+=/usr/local/include,/usr/include
+autocmd FileType c,cpp set path+=/usr/local/include,/usr/include
 
-autocmd FileType c inoremap <buffer> {<cr> {<cr>}<esc>O<tab>
-autocmd FileType c inoremap <buffer> (     ()<esc>i
-autocmd FileType c inoremap <buffer> ()    ()
-autocmd FileType c inoremap <buffer> [     []<esc>i
-autocmd FileType c inoremap <buffer> []    []
-autocmd FileType c inoremap <buffer> "     ""<esc>i
-autocmd FileType c inoremap <buffer> ""    ""
-autocmd FileType c inoremap <buffer> '     ''<esc>i
+autocmd FileType c,cpp inoremap <buffer> {<cr> {<cr>}<esc>O<tab>
+autocmd FileType c,cpp inoremap <buffer> (     ()<esc>i
+autocmd FileType c,cpp inoremap <buffer> ()    ()
+autocmd FileType c,cpp inoremap <buffer> [     []<esc>i
+autocmd FileType c,cpp inoremap <buffer> []    []
+autocmd FileType c,cpp inoremap <buffer> "     ""<esc>i
+autocmd FileType c,cpp inoremap <buffer> ""    ""
+autocmd FileType c,cpp inoremap <buffer> '     ''<esc>i
 
-autocmd FileType c nnoremap <buffer> <leader>for :-1read $HOME/.vim/snippets/c/for.c<cr>=j/S<cr>xi
-autocmd FileTYpe c nnoremap <buffer> <leader>if  :-1read $HOME/.vim/snippets/c/if.c<cr>=jf(a
-autocmd FileTYpe c nnoremap <buffer> <leader>ie  :-1read $HOME/.vim/snippets/c/if-else.c<cr>=2jf(a
-autocmd FileTYpe c nnoremap <buffer> <leader>in  :-1read $HOME/.vim/snippets/c/include.c<cr>f<a
-autocmd FileTYpe c nnoremap <buffer> <leader>wh  :-1read $HOME/.vim/snippets/c/while.c<cr>=jf(a
-autocmd FileTYpe c nnoremap <buffer> <leader>st  :-1read $HOME/.vim/snippets/c/struct.c<cr>:s/MyStruct//g
-autocmd FileTYpe c nnoremap <buffer> <leader>so  :-1read $HOME/.vim/snippets/c/opaque-struct.c<cr>:s/MyStruct//g
+autocmd FileType c,cpp nnoremap <buffer> <leader>for :-1read $HOME/.vim/snippets/c/for.c<cr>=j/S<cr>xi
+autocmd FileTYpe c,cpp nnoremap <buffer> <leader>if  :-1read $HOME/.vim/snippets/c/if.c<cr>=jf(a
+autocmd FileTYpe c,cpp nnoremap <buffer> <leader>ie  :-1read $HOME/.vim/snippets/c/if-else.c<cr>=2jf(a
+autocmd FileTYpe c,cpp nnoremap <buffer> <leader>in  :-1read $HOME/.vim/snippets/c/include.c<cr>f<a
+autocmd FileTYpe c,cpp nnoremap <buffer> <leader>wh  :-1read $HOME/.vim/snippets/c/while.c<cr>=jf(a
+autocmd FileTYpe c,cpp nnoremap <buffer> <leader>st  :-1read $HOME/.vim/snippets/c/struct.c<cr>:s/MyStruct//g
+autocmd FileTYpe c,cpp nnoremap <buffer> <leader>so  :-1read $HOME/.vim/snippets/c/opaque-struct.c<cr>:s/MyStruct//g
 augroup END
 
 " -----------------------------------------------------------------------------
