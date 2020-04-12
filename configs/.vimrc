@@ -104,6 +104,7 @@ autocmd FileTYpe c,cpp nnoremap <buffer> <leader>in  :-1read $HOME/.vim/snippets
 autocmd FileTYpe c,cpp nnoremap <buffer> <leader>wh  :-1read $HOME/.vim/snippets/c/while.c<cr>=jf(a
 autocmd FileTYpe c,cpp nnoremap <buffer> <leader>st  :-1read $HOME/.vim/snippets/c/struct.c<cr>:s/MyStruct//g
 autocmd FileTYpe c,cpp nnoremap <buffer> <leader>so  :-1read $HOME/.vim/snippets/c/opaque-struct.c<cr>:s/MyStruct//g
+autocmd FileTYpe c,cpp nnoremap <buffer> <leader>hg  :-1read $HOME/.vim/snippets/c/header-guard.h<cr>:s/HEADER_H//g
 augroup END
 
 " -----------------------------------------------------------------------------
